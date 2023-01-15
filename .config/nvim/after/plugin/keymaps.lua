@@ -92,6 +92,8 @@ nnoremap("yyp", ":co.<CR>")
 -- Better Vertical Motion
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
+nnoremap("{", "zz{")
+nnoremap("}", "zz}")
 
 -- Search repeat
 nnoremap("n", "nzzzv")
