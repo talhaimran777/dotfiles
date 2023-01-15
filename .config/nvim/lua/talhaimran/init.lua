@@ -1,4 +1,4 @@
-require("talhaimran.packer")
+require("talhaimran.lazy")
 require("talhaimran.options")
 require("talhaimran.coc")
 require("talhaimran.neogit")
