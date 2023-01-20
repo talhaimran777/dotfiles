@@ -38,22 +38,36 @@ require('lazy').setup({
   'alexghergh/nvim-tmux-navigation',
   'nvim-lualine/lualine.nvim',
   {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      -- Automatically install LSPs to stdpath for neovim
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
-
-      -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
-
-      -- Additional lua configuration, makes nvim stuff amazing
-      'folke/neodev.nvim',
+    'abecodes/tabout.nvim',
+    after = {
+      'coc'
     },
-  },
-  {
-    'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    dependecies = {
+      'nvim-treesitter'
+    },
+    config = function()
+      require('tabout').setup {
+        tabkey = '<A-o>', -- key to trigger tabout, set to an empty string to disable
+        backwards_tabkey = '<A-i>', -- key to trigger backwards tabout, set to an empty string to disable
+        act_as_tab = true, -- shift content if tab out is not possible
+        act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
+        default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
+        default_shift_tab = '<C-d>', -- reverse shift default action,
+        enable_backwards = true, -- well ...
+        completion = true, -- if the tabkey is used in a completion pum
+        tabouts = {
+          { open = "'", close = "'" },
+          { open = '"', close = '"' },
+          { open = '`', close = '`' },
+          { open = '(', close = ')' },
+          { open = '[', close = ']' },
+          { open = '{', close = '}' },
+          { open = '<', close = '>' }
+        },
+        ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+        exclude = {} -- tabout will ignore these filetypes
+      }
+    end
   },
   {
     'nvim-treesitter/nvim-treesitter',
@@ -75,7 +89,7 @@ require('lazy').setup({
     version = 'nightly'
   },
   {
-   'romgrk/barbar.nvim',
+    'romgrk/barbar.nvim',
     dependecies = {
       'kyazdani42/nvim-web-devicons',
     }
