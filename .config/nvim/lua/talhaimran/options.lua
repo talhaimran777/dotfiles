@@ -5,6 +5,8 @@ vim.g.AutoPairsShortcutToggle = '<C-p>'
 vim.g.ctrlsf_auto_focus = {
   at = "start"
 }
+vim.g.ctrlsf_case_sensitive = 'yes'
+vim.g.ctrlsf_populate_qflist = 1
 
 -- Options
 vim.opt.number = true

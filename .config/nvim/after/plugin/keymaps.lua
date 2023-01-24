@@ -50,8 +50,10 @@ nnoremap("gr", ":call CocAction('jumpReferences')<CR>")
 
 -- Ctrlsf
 nnoremap("<A-s>", ":CtrlSFToggle <CR>")
-nnoremap("<leader>ps", ":CtrlSF -S ''<Left>")
-nnoremap("<leader>pi", ":CtrlSF -I ''<Left>")
+nnoremap("<leader>ps", ":CtrlSF -S -- ''<Left>")
+nnoremap("<leader>pi", ":CtrlSF -I -- ''<Left>")
+nnoremap("<leader>pd", ":CtrlSF -S 'def '<Left>")
+nnoremap("<leader>w", ":CtrlSF <CR>")
 nnoremap("<leader>s", ":CtrlSFFocus <CR>")
 
 -- Barbar
@@ -83,10 +85,6 @@ nnoremap("<A-r>", ":NvimTreeFocus<cr>R<c-w><c-p>:CtrlPClearCache<CR>")
 nnoremap("<leader>fh", ":0GcLog<CR>")
 
 -- Remaping vim motions
-nnoremap("<leader>w", "yaw")
-nnoremap("<leader>v", "vi\"")
-nnoremap("<leader>d", "daw")
-nnoremap("<leader>D", "daW")
 nnoremap("yyp", ":co.<CR>")
 
 -- Better Vertical Motion
