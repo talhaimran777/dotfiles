@@ -97,6 +97,10 @@ nnoremap("}", "zz}")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
 
-
 -- Remap for reset buffer
 nnoremap("<leader>rr", ":e!<CR>")
+
+-- Keybindings Quick Fix List
+nnoremap("]q", ":cnext<CR>")
+nnoremap("[q", ":cprevious<CR>")
+nnoremap("<leader>qo", ":copen<CR>")
