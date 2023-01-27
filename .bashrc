@@ -100,6 +100,8 @@ alias t0='tmux attach-session -t 0'
 alias t1='tmux attach-session -t 1'
 alias t3='tmux attach-session -t 3'
 alias t4='tmux attach-session -t 4'
+alias tn='tmux attach-session -t nvim'
+alias tg='tmux attach-session -t gomoment'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
