@@ -57,7 +57,6 @@ nnoremap("<leader>w", ":CtrlSF <CR>")
 nnoremap("<leader>s", ":CtrlSFFocus <CR>")
 
 -- Barbar
-nnoremap ("<S-Tab>", ":BufferNext<CR>")
 nnoremap ("<A-.>", ":BufferNext<CR>")
 nnoremap ("<A-,>", ":BufferPrevious<CR>")
 
@@ -104,3 +103,7 @@ nnoremap("<leader>rr", ":e!<CR>")
 nnoremap("]q", ":cnext<CR>")
 nnoremap("[q", ":cprevious<CR>")
 nnoremap("<leader>qo", ":copen<CR>")
+
+-- Buffer Surf
+nnoremap("<M-o>", ":BufSurfBack<CR>")
+nnoremap("<M-i>", ":BufSurfForward<CR>")
