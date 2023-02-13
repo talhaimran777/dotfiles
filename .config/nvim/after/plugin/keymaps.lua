@@ -32,7 +32,8 @@ nnoremap("<A-l>", "<C-w>l")
 -- FZF
 nnoremap("<leader>fr", ":History<CR>")
 nnoremap("<leader>ff", ":e %:h/<C-d>")
-nnoremap("<A-p>", ":FZF<CR>")
+nnoremap("<A-g>", ":FZF<CR>")
+nnoremap("<A-p>", ":GFiles<CR>")
 
 -- Move text
 vnoremap("<", "<gv")
@@ -57,11 +58,11 @@ nnoremap("<leader>w", ":CtrlSF <CR>")
 nnoremap("<leader>s", ":CtrlSFFocus <CR>")
 
 -- Barbar
-nnoremap ("<A-.>", ":BufferNext<CR>")
-nnoremap ("<A-,>", ":BufferPrevious<CR>")
-
-nnoremap ("<A-<>", ":BufferMovePrevious<CR>")
-nnoremap ("<A->>", ":BufferMoveNext<CR>")
+-- nnoremap ("<A-.>", ":BufferNext<CR>")
+-- nnoremap ("<A-,>", ":BufferPrevious<CR>")
+--
+-- nnoremap ("<A-<>", ":BufferMovePrevious<CR>")
+-- nnoremap ("<A->>", ":BufferMoveNext<CR>")
 
 nnoremap ("<leader>1", ":BufferGoto 1<CR>")
 nnoremap ("<leader>2", ":BufferGoto 2<CR>")
@@ -103,6 +104,7 @@ nnoremap("<leader>rr", ":e!<CR>")
 nnoremap("]q", ":cnext<CR>")
 nnoremap("[q", ":cprevious<CR>")
 nnoremap("<leader>qo", ":copen<CR>")
+nnoremap("<leader>qc", ":cclose<CR>")
 
 -- Buffer Surf
 nnoremap("<M-o>", ":BufSurfBack<CR>")

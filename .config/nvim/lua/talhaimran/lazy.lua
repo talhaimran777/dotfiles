@@ -18,6 +18,9 @@ vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappin
 
 require('lazy').setup({
   'ton/vim-bufsurf',
+  'Mofiqul/vscode.nvim',
+  'ellisonleao/gruvbox.nvim',
+  'github/copilot.vim',
   'kyazdani42/nvim-web-devicons',
   'folke/tokyonight.nvim',
   'junegunn/fzf',
@@ -89,12 +92,12 @@ require('lazy').setup({
     },
     version = 'nightly'
   },
-  {
-    'romgrk/barbar.nvim',
-    dependecies = {
-      'kyazdani42/nvim-web-devicons',
-    }
-  },
+  -- {
+  --   'romgrk/barbar.nvim',
+  --   dependecies = {
+  --     'kyazdani42/nvim-web-devicons',
+  --   }
+  -- },
   {
     'kevinhwang91/nvim-ufo',
     dependencies = {
