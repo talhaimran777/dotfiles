@@ -18,6 +18,7 @@ vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappin
 
 require('lazy').setup({
   'ton/vim-bufsurf',
+  'godlygeek/tabular',
   'Mofiqul/vscode.nvim',
   'ellisonleao/gruvbox.nvim',
   'github/copilot.vim',

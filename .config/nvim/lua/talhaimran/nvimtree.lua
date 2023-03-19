@@ -6,7 +6,6 @@ end
 
 nvimtree.setup{
   view = {
-    adaptive_size = true,
-    side = 'right'
+    adaptive_size = true
   },
 }

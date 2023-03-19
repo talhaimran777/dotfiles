@@ -109,3 +109,7 @@ nnoremap("<leader>qc", ":cclose<CR>")
 -- Buffer Surf
 nnoremap("<M-o>", ":BufSurfBack<CR>")
 nnoremap("<M-i>", ":BufSurfForward<CR>")
+
+-- Tabularize
+vnoremap("<leader>t:", ":Tabularize /:<CR>")
+vnoremap("<leader>t=", ":Tabularize /=")
