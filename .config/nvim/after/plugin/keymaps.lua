@@ -78,7 +78,7 @@ nnoremap ("<A-o>", ":BufferPick<CR>")
 
 -- Nvim Tree
 nnoremap("<A-x>", ":NvimTreeToggle<CR>")
-nnoremap("<A-f>", ":NvimTreeFindFile<CR>")
+nnoremap("<A-f>", ":NvimTreeFindFileToggle<CR>")
 nnoremap("<A-r>", ":NvimTreeFocus<cr>R<c-w><c-p>:CtrlPClearCache<CR>")
 
 -- Vim Fugitive
