@@ -40,7 +40,6 @@ require('lazy').setup({
   'tpope/vim-sleuth',
   'ryanoasis/vim-devicons',
   'alexghergh/nvim-tmux-navigation',
-  'nvim-lualine/lualine.nvim',
   {
     'nvim-treesitter/nvim-treesitter',
     build = function()

@@ -158,6 +158,3 @@ export PATH=$M2:$PATH
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-export JAVA_HOME=/usr/lib/jvm/jdk-17
-export PATH=$JAVA_HOME/bin:$PATH
