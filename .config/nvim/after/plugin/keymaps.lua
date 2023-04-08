@@ -99,7 +99,11 @@ nnoremap("<leader>qo", ":copen<CR>")
 nnoremap("<leader>qc", ":cclose<CR>")
 
 -- Toggle to last buffer
-nnoremap("<M-o>", ":b#<Bar>bd#<CR>")
+nnoremap("<M-6>", ":b#<Bar>bd#<CR>")
+
+-- Buffer Surf
+nnoremap("<M-o>", ":BufSurfBack<CR>")
+nnoremap("<M-i>", ":BufSurfForward<CR>")
 
 -- Tabularize
 vnoremap("<leader>t:", ":Tabularize /:<CR>")

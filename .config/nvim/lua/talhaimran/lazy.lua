@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require('lazy').setup({
+  'ton/vim-bufsurf',
   'godlygeek/tabular',
   'Mofiqul/vscode.nvim',
   'ellisonleao/gruvbox.nvim',
