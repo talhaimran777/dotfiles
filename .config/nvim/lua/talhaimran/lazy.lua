@@ -25,7 +25,6 @@ require('lazy').setup({
   'folke/tokyonight.nvim',
   'junegunn/fzf',
   'junegunn/fzf.vim',
-  'sbdchd/neoformat',
   'numToStr/Comment.nvim',
   'JoosepAlviste/nvim-ts-context-commentstring',
   'TimUntersberger/neogit',
