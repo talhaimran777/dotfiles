@@ -15,6 +15,7 @@ vim.opt.list = true
 vim.opt.listchars:append("tab:> ")
 vim.opt.swapfile = false
 vim.opt.wrap = false
+vim.opt.title = true
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
@@ -40,3 +41,6 @@ vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 vim.opt.foldcolumn  = "1"
 
 vim.opt.scrolloff = 10
+
+vim.opt.cmdheight = 0
+vim.opt.statusline = " %t - %y %= %l / %L"
