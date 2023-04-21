@@ -64,7 +64,7 @@ require('lazy').setup({
       'kevinhwang91/promise-async'
     }
   },
-  { 'neoclide/coc.nvim', branch = 'release' },
+  { 'neoclide/coc.nvim',       branch = 'release' },
   {
     'rmagatti/auto-session',
     config = function()
@@ -73,5 +73,6 @@ require('lazy').setup({
         auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
       }
     end
-  }
+  },
+  { 'akinsho/toggleterm.nvim', version = "*",     config = true }
 })
