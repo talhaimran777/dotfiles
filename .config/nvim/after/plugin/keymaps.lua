@@ -33,6 +33,7 @@ nnoremap("<A-l>", "<C-w>l")
 nnoremap("<leader>fr", ":History<CR>")
 nnoremap("<leader>ff", ":e %:h/<C-d>")
 nnoremap("<A-p>", ":GFiles<CR>")
+nnoremap("<A-g>", ":FZF<CR>")
 
 -- Move text
 vnoremap("<", "<gv")
@@ -55,18 +56,6 @@ nnoremap("<leader>pi", ":CtrlSF -I -- ''<Left>")
 nnoremap("<leader>pd", ":CtrlSF -S 'def '<Left>")
 nnoremap("<leader>w", ":CtrlSF <CR>")
 nnoremap("<leader>s", ":CtrlSFFocus <CR>")
-
-nnoremap ("<leader>1", ":BufferGoto 1<CR>")
-nnoremap ("<leader>2", ":BufferGoto 2<CR>")
-nnoremap ("<leader>3", ":BufferGoto 3<CR>")
-nnoremap ("<leader>4", ":BufferGoto 4<CR>")
-nnoremap ("<leader>5", ":BufferGoto 5<CR>")
-nnoremap ("<leader>6", ":BufferGoto 6<CR>")
-nnoremap ("<leader>7", ":BufferGoto 7<CR>")
-nnoremap ("<leader>8", ":BufferGoto 8<CR>")
-nnoremap ("<leader>9", ":BufferGoto 9<CR>")
-nnoremap ("<leader>0", ":BufferLast<CR>")
-nnoremap ("<A-o>", ":BufferPick<CR>")
 
 -- Nvim Tree
 nnoremap("<A-x>", ":NvimTreeToggle<CR>")
@@ -108,3 +97,6 @@ nnoremap("<M-i>", ":BufSurfForward<CR>")
 -- Tabularize
 vnoremap("<leader>t:", ":Tabularize /:<CR>")
 vnoremap("<leader>t=", ":Tabularize /=")
+
+-- Tabularize
+nnoremap("<C-f>", ":Format<CR>")

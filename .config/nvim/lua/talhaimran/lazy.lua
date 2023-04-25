@@ -35,6 +35,7 @@ require('lazy').setup({
   'honza/vim-snippets',
   'mg979/vim-visual-multi',
   'tpope/vim-fugitive',
+  'tpope/vim-surround',
   'jiangmiao/auto-pairs',
   'tpope/vim-sleuth',
   'ryanoasis/vim-devicons',
