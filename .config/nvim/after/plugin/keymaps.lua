@@ -98,5 +98,8 @@ nnoremap("<M-i>", ":BufSurfForward<CR>")
 vnoremap("<leader>t:", ":Tabularize /:<CR>")
 vnoremap("<leader>t=", ":Tabularize /=")
 
--- Tabularize
-nnoremap("<C-f>", ":Format<CR>")
+-- Format
+nnoremap("<M-y>", ":Format<CR>")
+
+-- Duplicate line & put cursor at the beginning of the line
+nnoremap("yyp", "yyp0w")
