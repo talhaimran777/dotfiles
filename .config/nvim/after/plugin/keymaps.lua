@@ -100,3 +100,27 @@ nnoremap("<M-y>", ":Format<CR>")
 
 -- Duplicate line & put cursor at the beginning of the line
 nnoremap("yyp", "yyp0w")
+
+-- Move up & down with wrapped lines
+nnoremap("j", "v:lua._smart_j()", { expr = true, noremap = true })
+nnoremap("k", "v:lua._smart_k()", { expr = true, noremap = true })
+
+function _smart_j()
+  local count = vim.v.count
+  local mode = vim.fn.mode(1)
+  if count ~= 0 or mode:sub(1,2) == "no" then
+    return "j"
+  else
+    return "gj"
+  end
+end
+
+function _smart_k()
+  local count = vim.v.count
+  local mode = vim.fn.mode(1)
+  if count ~= 0 or mode:sub(1,2) == "no" then
+    return "k"
+  else
+    return "gk"
+  end
+end
