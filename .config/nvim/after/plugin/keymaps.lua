@@ -17,9 +17,6 @@ nnoremap("<C-Right>", ":vertical resize +5<CR>")
 nnoremap("<C-]>", "zL")
 nnoremap("<C-[>", "zH")
 
--- Switch to last buffer
-nnoremap("<leader>`", "<C-6>")
-
 -- Remove & paste but still in register
 xnoremap("<leader>p", "\"_dP")
 

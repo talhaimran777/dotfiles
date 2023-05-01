@@ -29,6 +29,7 @@ require('lazy').setup({
   'JoosepAlviste/nvim-ts-context-commentstring',
   'TimUntersberger/neogit',
   'nvim-lua/plenary.nvim',
+  'ThePrimeagen/harpoon',
   'dyng/ctrlsf.vim',
   'lukas-reineke/indent-blankline.nvim',
   'lewis6991/gitsigns.nvim',
