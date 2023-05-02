@@ -102,4 +102,6 @@ vim.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", { n
 
 vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
 
+vim.api.nvim_create_user_command("Javac", "call CocActionAsync('runCommand', 'java.clean.workspace')", {})
+
 vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}")
