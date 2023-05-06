@@ -18,9 +18,6 @@ vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappin
 
 require('lazy').setup({
   'ton/vim-bufsurf',
-  'godlygeek/tabular',
-  'Mofiqul/vscode.nvim',
-  'ellisonleao/gruvbox.nvim',
   'kyazdani42/nvim-web-devicons',
   'folke/tokyonight.nvim',
   'junegunn/fzf',
@@ -37,7 +34,6 @@ require('lazy').setup({
   'mg979/vim-visual-multi',
   'tpope/vim-fugitive',
   'tpope/vim-surround',
-  'jiangmiao/auto-pairs',
   'tpope/vim-sleuth',
   'ryanoasis/vim-devicons',
   'alexghergh/nvim-tmux-navigation',

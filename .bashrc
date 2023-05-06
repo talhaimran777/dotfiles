@@ -103,6 +103,8 @@ alias t4='tmux attach-session -t 4'
 alias tn='tmux attach-session -t nvim'
 alias tg='tmux attach-session -t gomoment'
 
+alias gc='git config --local --edit'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.

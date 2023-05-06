@@ -3,6 +3,5 @@
   "suggest.noselect": true,
   "snippets.ultisnips.pythonPrompt": false,
   "codeLens.enable": true,
-  "java.referencesCodeLens.enabled": true,
-  "java.jdt.ls.vmargs": "-javaagent:/home/ubuntu/.config/coc/extensions/coc-lombok-data/server/lombok.jar -Xbootclasspath/a:/home/ubuntu/.config/coc/extensions/coc-lombok-data/server/lombok.jar -javaagent:\"/home/ubuntu/.config/coc/extensions/coc-lombok-data/server/lombok.jar\""
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:\"/home/ubuntu/.config/coc/extensions/coc-lombok-data/server/lombok.jar\""
 }
