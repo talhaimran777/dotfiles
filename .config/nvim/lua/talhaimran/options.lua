@@ -1,5 +1,6 @@
 -- Globals
 vim.g.mapleader = " "
+vim.g.AutoPairsShortcutToggle = '<C-p>'
 vim.g.ctrlsf_position = "bottom"
 vim.g.ctrlsf_auto_focus = {
   at = "start"
