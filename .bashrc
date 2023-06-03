@@ -134,20 +134,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# # Feed the output of fd into fzf
-# fd --type f --strip-cwd-prefix | fzf
-#
-# # Setting fd as the default source for fzf
-# export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
-#
-# # Now fzf (w/o pipe) will use fd instead of find
-# fzf
-#
-# # To apply the command to CTRL-T as well
-# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
-
 # pnpm
 export PNPM_HOME="/home/ubuntu/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -164,3 +150,22 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
 export PATH=$PATH:/opt/gradle/gradle-7.6.1/bin/
+
+
+# Neovim config switcher
+alias nvim-chad="NVIM_APPNAME=ChadNvim nvim"
+
+nvims() {
+  items=("default" "NvChad")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bind -x '"\C-a": nvims'
+export PATH=$HOME/bin:$PATH
