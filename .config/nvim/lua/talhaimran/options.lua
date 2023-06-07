@@ -16,6 +16,8 @@ vim.opt.listchars:append("tab:> ")
 vim.opt.swapfile = false
 vim.opt.title = true
 
+vim.opt.wrap = false
+
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
