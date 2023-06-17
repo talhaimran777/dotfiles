@@ -1,6 +1,6 @@
 require("talhaimran.lazy")
+require("talhaimran.lsp")
 require("talhaimran.options")
-require("talhaimran.coc")
 require("talhaimran.neogit")
 require("talhaimran.comments")
 require("talhaimran.indentline")
