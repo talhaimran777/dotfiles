@@ -69,11 +69,10 @@ return require('packer').startup(function(use)
 			ts_update()
 		end,
 		requires = {
-			{ 'JoosepAlviste/nvim-ts-context-commentstring' },
-			{ 'numToStr/Comment.nvim' }
+			{ 'JoosepAlviste/nvim-ts-context-commentstring' }
 		}
 	}
-
+	use { 'numToStr/Comment.nvim' }
 	use {
 		'nvim-treesitter/nvim-treesitter-textobjects',
 		requires = {

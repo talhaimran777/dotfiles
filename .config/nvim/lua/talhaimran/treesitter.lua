@@ -59,8 +59,8 @@ treesitter_config.setup {
     },
   },
   highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = false,
+    enable = true,
+    additional_vim_regex_highlighting = false,
   },
   autotag = {
     enable = true,
@@ -68,6 +68,8 @@ treesitter_config.setup {
   indent = {
     enable = true,
     disable = {},
-  }
+  },
+  context_commentstring = {
+    enable = true,
+  },
 }
-
