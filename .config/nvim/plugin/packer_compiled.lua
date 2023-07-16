@@ -167,7 +167,7 @@ _G.packer_plugins = {
   neogit = {
     loaded = true,
     path = "/home/ubuntu/.local/share/nvim/site/pack/packer/start/neogit",
-    url = "https://github.com/TimUntersberger/neogit"
+    url = "https://github.com/NeogitOrg/neogit"
   },
   ["nvim-cmp"] = {
     loaded = true,

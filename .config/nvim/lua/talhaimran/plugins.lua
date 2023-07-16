@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
 	use { 'folke/tokyonight.nvim' }
 	use { 'junegunn/fzf' }
 	use { 'junegunn/fzf.vim' }
-	use { 'TimUntersberger/neogit' }
+	use { 'NeogitOrg/neogit' }
 	use { 'nvim-lua/plenary.nvim' }
 	use { 'ThePrimeagen/harpoon' }
 	use { 'dyng/ctrlsf.vim' }
@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
 	use { 'ryanoasis/vim-devicons' }
 	use { 'alexghergh/nvim-tmux-navigation' }
 	use { 'rmagatti/auto-session' }
+	use { 'numToStr/Comment.nvim' }
 	use {
 		"williamboman/mason.nvim",
 		run = ":MasonUpdate"
@@ -72,7 +73,7 @@ return require('packer').startup(function(use)
 			{ 'JoosepAlviste/nvim-ts-context-commentstring' }
 		}
 	}
-	use { 'numToStr/Comment.nvim' }
+
 	use {
 		'nvim-treesitter/nvim-treesitter-textobjects',
 		requires = {

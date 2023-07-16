@@ -11,7 +11,7 @@ local root_files = {
 
 local features = {
   -- change this to `true` to enable codelens
-  codelens = true,
+  codelens = false,
 
   -- change this to `true` if you have `nvim-dap`,
   -- `java-test` and `java-debug-adapter` installed
@@ -136,7 +136,7 @@ local function jdtls_on_attach(client, bufnr)
   -- https://github.com/mfussenegger/nvim-jdtls#usage
   
   local opts = {buffer = bufnr}
-  vim.keymap.set('n', '<A-o>', "<cmd>lua require('jdtls').organize_imports()<cr>", opts)
+  vim.keymap.set('n', '<leader>or', "<cmd>lua require('jdtls').organize_imports()<cr>", opts)
   vim.keymap.set('n', 'crv', "<cmd>lua require('jdtls').extract_variable()<cr>", opts)
   vim.keymap.set('x', 'crv', "<esc><cmd>lua require('jdtls').extract_variable(true)<cr>", opts)
   vim.keymap.set('n', 'crc', "<cmd>lua require('jdtls').extract_constant()<cr>", opts)

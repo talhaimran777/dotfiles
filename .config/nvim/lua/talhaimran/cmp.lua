@@ -4,10 +4,8 @@ require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup {
   mapping = cmp.mapping.preset.insert {
-    ['<S-j>'] = cmp.mapping.select_next_item(),
-    ['<S-k>'] = cmp.mapping.select_prev_item(),
-    ['<S-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<S-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-j>'] = cmp.mapping.select_next_item(),
+    ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<C-Space>'] = cmp.mapping.complete {},
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,

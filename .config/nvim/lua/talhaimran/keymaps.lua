@@ -93,6 +93,10 @@ nnoremap("yyp", "yyp0w")
 nnoremap("j", "v:lua._smart_j()", { expr = true, noremap = true })
 nnoremap("k", "v:lua._smart_k()", { expr = true, noremap = true })
 
+-- Diagnostic hide & show
+nnoremap("<leader>dh", ":lua vim.diagnostic.hide()<CR>")
+nnoremap("<leader>ds", ":lua vim.diagnostic.show()<CR>")
+
 function _smart_j()
   local count = vim.v.count
   local mode = vim.fn.mode(1)
