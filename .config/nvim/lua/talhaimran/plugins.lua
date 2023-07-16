@@ -14,7 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
 	use { 'wbthomason/packer.nvim' }
 	use { 'mfussenegger/nvim-jdtls' }
-	use { 'github/copilot.vim' }
+	-- use { 'github/copilot.vim' }
 	use { 'jiangmiao/auto-pairs' }
 	use { 'ton/vim-bufsurf' }
 	use { 'kyazdani42/nvim-web-devicons' }

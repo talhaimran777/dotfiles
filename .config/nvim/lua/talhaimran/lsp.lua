@@ -37,6 +37,10 @@ require('lspconfig').cssls.setup{}
 require('lspconfig').tailwindcss.setup{}
 require('lspconfig').jsonls.setup{}
 require('lspconfig').eslint.setup{}
+require('lspconfig').prismals.setup{}
+require('lspconfig').yamlls.setup{}
+require('lspconfig').dockerls.setup{}
+require('lspconfig').docker_compose_language_service.setup{}
 
 lsp.set_server_config({
 	capabilities = {
