@@ -97,6 +97,9 @@ nnoremap("k", "v:lua._smart_k()", { expr = true, noremap = true })
 nnoremap("<leader>dh", ":lua vim.diagnostic.hide()<CR>")
 nnoremap("<leader>ds", ":lua vim.diagnostic.show()<CR>")
 
+-- OrganizeImports
+vim.cmd("command! -nargs=0 OR lua OrganizeImports()")
+
 function _smart_j()
   local count = vim.v.count
   local mode = vim.fn.mode(1)
@@ -117,3 +120,6 @@ function _smart_k()
   end
 end
 
+function OrganizeImports()
+    vim.lsp.buf.execute_command({command = "_typescript.organizeImports", arguments = {vim.fn.expand("%:p")}})
+end
