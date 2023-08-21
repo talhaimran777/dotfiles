@@ -19,6 +19,9 @@ lsp.on_attach(function(client, bufnr)
 
 	-- Code Actions
 	vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+
+	-- Rename
+	vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 end)
 
 lsp.skip_server_setup({ 'jdtls' })
