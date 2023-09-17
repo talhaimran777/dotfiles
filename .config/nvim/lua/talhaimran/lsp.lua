@@ -34,25 +34,25 @@ lsp.ensure_installed({
 require('lspconfig').tsserver.setup({})
 require('lspconfig').intelephense.setup({})
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-require('lspconfig').bufls.setup{}
-require('lspconfig').html.setup{}
-require('lspconfig').cssls.setup{}
-require('lspconfig').tailwindcss.setup{}
-require('lspconfig').jsonls.setup{}
-require('lspconfig').eslint.setup{}
-require('lspconfig').prismals.setup{}
-require('lspconfig').yamlls.setup{}
-require('lspconfig').dockerls.setup{}
-require('lspconfig').docker_compose_language_service.setup{}
+require('lspconfig').bufls.setup {}
+require('lspconfig').html.setup {}
+require('lspconfig').cssls.setup {}
+require('lspconfig').tailwindcss.setup {}
+require('lspconfig').jsonls.setup {}
+require('lspconfig').eslint.setup {}
+require('lspconfig').prismals.setup {}
+require('lspconfig').yamlls.setup {}
+require('lspconfig').dockerls.setup {}
+require('lspconfig').docker_compose_language_service.setup {}
 
-lsp.set_server_config({
-	capabilities = {
-		textDocument = {
-			foldingRange = {
-				dynamicRegistration = false,
-				lineFoldingOnly = true
-			}
-		}
+lsp.format_mapping('<A-y>', {
+	format_opts = {
+		async = false,
+		timeout_ms = 10000,
+	},
+	servers = {
+		['null-ls'] = { 'jsonc', 'css', 'handlebars', 'yaml', 'json', 'typescriptreact', 'markdown.mdx', 'vue', 'graphql',
+			'less', 'typescript', 'javascript', 'markdown', 'scss', 'html', 'javascriptreact' },
 	}
 })
 
@@ -61,7 +61,7 @@ lsp.setup()
 local null_ls = require('null-ls')
 
 null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.prettier,
-  }
+	sources = {
+		null_ls.builtins.formatting.prettier,
+	}
 })

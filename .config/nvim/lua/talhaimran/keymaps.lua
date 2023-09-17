@@ -86,9 +86,6 @@ nnoremap("<M-i>", ":BufSurfForward<CR>")
 vnoremap("<leader>t:", ":Tabularize /:<CR>")
 vnoremap("<leader>t=", ":Tabularize /=")
 
--- Duplicate line & put cursor at the beginning of the line
-nnoremap("yyp", "yyp0w")
-
 -- Move up & down with wrapped lines
 nnoremap("j", "v:lua._smart_j()", { expr = true, noremap = true })
 nnoremap("k", "v:lua._smart_k()", { expr = true, noremap = true })
