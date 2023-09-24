@@ -44,6 +44,19 @@ require('lspconfig').prismals.setup {}
 require('lspconfig').yamlls.setup {}
 require('lspconfig').dockerls.setup {}
 require('lspconfig').docker_compose_language_service.setup {}
+require('lspconfig').emmet_language_server.setup {
+	filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug",
+		"typescriptreact", "vue" },
+	init_options = {
+		excludeLanguages = {},
+		preferences = {},
+		showAbbreviationSuggestions = true,
+		showExpandedAbbreviation = "always",
+		showSuggestionsAsSnippets = false,
+		syntaxProfiles = {},
+		variables = {},
+	},
+}
 
 lsp.format_mapping('<A-y>', {
 	format_opts = {
