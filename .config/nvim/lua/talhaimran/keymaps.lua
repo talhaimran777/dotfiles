@@ -91,8 +91,8 @@ nnoremap("j", "v:lua._smart_j()", { expr = true, noremap = true })
 nnoremap("k", "v:lua._smart_k()", { expr = true, noremap = true })
 
 -- Diagnostic hide & show
-nnoremap("<leader>dh", ":lua vim.diagnostic.hide()<CR>")
-nnoremap("<leader>ds", ":lua vim.diagnostic.show()<CR>")
+nnoremap("<leader>dh", ":lua vim.diagnostic.disable()<CR>")
+nnoremap("<leader>ds", ":lua vim.diagnostic.enable()<CR>")
 
 -- Typescript OrganizeImports
 vim.cmd("command! -nargs=0 OR lua OrganizeImports()")
