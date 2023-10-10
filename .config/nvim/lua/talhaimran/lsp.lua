@@ -1,7 +1,7 @@
-local lsp = require('lsp-zero').preset({})
+local lsp_zero = require('lsp-zero')
 
-lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({ buffer = bufnr, omit = { '[d', ']d' } })
+lsp_zero.on_attach(function(client, bufnr)
+	lsp_zero.default_keymaps({ buffer = bufnr, omit = { '[d', ']d' } })
 
 	local opts = { buffer = bufnr }
 	-- Type definition
@@ -24,22 +24,15 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 end)
 
-lsp.skip_server_setup({ 'jdtls' })
-
-lsp.ensure_installed({
-	'tsserver',
-	'lua_ls',
-})
-
 require('lspconfig').tsserver.setup({})
 require('lspconfig').intelephense.setup({})
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup(lsp_zero.nvim_lua_ls())
 require('lspconfig').bufls.setup {}
 require('lspconfig').html.setup {}
 require('lspconfig').cssls.setup {}
 require('lspconfig').tailwindcss.setup {}
 require('lspconfig').jsonls.setup {}
-require('lspconfig').eslint.setup {}
+-- require('lspconfig').eslint.setup {}
 require('lspconfig').prismals.setup {}
 require('lspconfig').yamlls.setup {}
 require('lspconfig').dockerls.setup {}
@@ -58,23 +51,34 @@ require('lspconfig').emmet_language_server.setup {
 	},
 }
 
-lsp.format_mapping('<A-y>', {
+
+lsp_zero.format_mapping('<A-y>', {
 	format_opts = {
 		async = false,
 		timeout_ms = 10000,
 	},
 	servers = {
-		['null-ls'] = { 'jsonc', 'css', 'handlebars', 'yaml', 'json', 'typescriptreact', 'markdown.mdx', 'vue', 'graphql',
+		['null-ls'] = { 'jsonc', 'css', 'handlebars', 'yaml', 'json', 'typescriptreact', 'markdown.mdx', 'vue',
+			'graphql',
 			'less', 'typescript', 'javascript', 'markdown', 'scss', 'html', 'javascriptreact' },
 	}
 })
-
-lsp.setup()
 
 local null_ls = require('null-ls')
 
 null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.prettier,
+	}
+})
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+	ensure_installed = { 'tsserver', 'lua_ls', 'emmet_language_server', 'docker_compose_language_service',
+		'dockerls',
+		'yamlls', 'prismals', 'jsonls', 'tailwindcss', 'cssls', 'html', 'lua_ls', 'intelephense',
+		'tsserver' },
+	handlers = {
+		lsp_zero.default_setup,
 	}
 })
