@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
 	use { 'junegunn/fzf.vim' }
 	use { 'NeogitOrg/neogit' }
 	use { 'nvim-lua/plenary.nvim' }
-	use { 'jose-elias-alvarez/null-ls.nvim' }
 	use { 'ThePrimeagen/harpoon' }
 	use { 'dyng/ctrlsf.vim' }
 	use { 'lukas-reineke/indent-blankline.nvim' }

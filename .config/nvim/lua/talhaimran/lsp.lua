@@ -25,14 +25,12 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require('lspconfig').tsserver.setup({})
-require('lspconfig').intelephense.setup({})
 require('lspconfig').lua_ls.setup(lsp_zero.nvim_lua_ls())
 require('lspconfig').bufls.setup {}
 require('lspconfig').html.setup {}
 require('lspconfig').cssls.setup {}
 require('lspconfig').tailwindcss.setup {}
 require('lspconfig').jsonls.setup {}
--- require('lspconfig').eslint.setup {}
 require('lspconfig').prismals.setup {}
 require('lspconfig').yamlls.setup {}
 require('lspconfig').dockerls.setup {}
@@ -56,19 +54,6 @@ lsp_zero.format_mapping('<A-y>', {
 	format_opts = {
 		async = false,
 		timeout_ms = 10000,
-	},
-	servers = {
-		['null-ls'] = { 'jsonc', 'css', 'handlebars', 'yaml', 'json', 'typescriptreact', 'markdown.mdx', 'vue',
-			'graphql',
-			'less', 'typescript', 'javascript', 'markdown', 'scss', 'html', 'javascriptreact' },
-	}
-})
-
-local null_ls = require('null-ls')
-
-null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.prettier,
 	}
 })
 
@@ -76,8 +61,8 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = { 'tsserver', 'lua_ls', 'emmet_language_server', 'docker_compose_language_service',
 		'dockerls',
-		'yamlls', 'prismals', 'jsonls', 'tailwindcss', 'cssls', 'html', 'lua_ls', 'intelephense',
-		'tsserver' },
+		'yamlls', 'prismals', 'jsonls', 'tailwindcss', 'cssls', 'html', 'lua_ls',
+	},
 	handlers = {
 		lsp_zero.default_setup,
 	}
